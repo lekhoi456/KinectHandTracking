@@ -1,0 +1,21 @@
+﻿<Window x:Class="KinectHandTracking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Control Slide using Kinect v2" Height="480" Width="800" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Viewbox>
+            <Grid Width="1920" Height="1080">
+                <Image Name="camera" />
+                <Canvas Name="canvas" />
+            </Grid>
+        </Viewbox>
+        <Grid Style="{StaticResource ContainerStyle}" Width="792" Margin="0,309,0,0">
+
+            <StackPanel Margin="0,10,0,0">
+                <TextBlock Text="Function:" Style="{StaticResource TitleStyle}" Margin="42,0,0,0" />
+                <TextBlock x:Name="tblLeftHandState" Text="-" Style="{StaticResource StateStyle}" Margin="42,0,0,0" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>
